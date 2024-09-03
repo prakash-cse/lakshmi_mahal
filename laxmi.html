@@ -1,0 +1,644 @@
+
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lakshmi Mahal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+    crossorigin="anonymous" />
+   
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Cardo', serif !important;
+        min-height: 100vh !important;
+      }
+
+      .nav-link {
+        color: white !important;
+      }
+
+      .nav-link:hover {
+        color: #fbb041 !important;
+      }
+
+      .bg--yellow {
+        background-color: #fbb041;
+      }
+
+      .bg--grey {
+        background-color: rgba(217, 217, 217, 0.32);
+      }
+
+      .card {
+        transition: transform 0.2s ease;
+        box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+        border-radius: 0;
+        border: 0;
+        margin-bottom: 1.5em;
+      }
+
+      .card:hover {
+        transform: scale(1.1);
+      }
+      .icon-color {
+        color: red;
+      }
+
+      .hello {
+        opacity: 1 !important;
+      }
+      .full {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      .full .content {
+        background-color: rgba(0, 0, 0, 0.75) !important;
+        height: 100%;
+        width: 100%;
+        display: grid;
+      }
+      .full .content img {
+        left: 50%;
+        transform: translate3d(0, 0, 0);
+        animation: zoomin 1s ease;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+      }
+      .byebye {
+        opacity: 0;
+      }
+      .byebye:hover {
+        transform: scale(0.2) !important;
+      }
+      .zoom {
+        transition: transform 0.3s; /* Animation */
+      }
+
+      .zoom:hover {
+        transform: scale(
+          0.9
+        ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      }
+    </style>
+  </head>
+  <body class="h-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <img src="img/logo.png" class="img-fluid rounded-circle" width="50" alt="" /> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"> <a class="nav-link text-decoration-none mx-2" aria-current="page" href="#HOME" >HOME</a > </li>
+            <li class="nav-item"> <a class="nav-link text-decoration-none mx-2" href="#FUNCTIONS/EVENTS" >FUNCTIONS/EVENTS</a > </li>
+            <li class="nav-item"> <a class="nav-link text-decoration-none mx-2" href="#FACILITIES" >FACILITIES</a > </li>
+            <li class="nav-item"> <a class="nav-link text-decoration-none mx-2" href="#SERVICES" >SERVICES</a > </li>
+            <li class="nav-item"> <a class="nav-link text-decoration-none mx-2" href="#GALLERY" >GALLERY</a > </li>
+            <li class="nav-item"> <a class="nav-link text-decoration-none mx-2" href="#CONTACT" >CONTACT US</a > </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="mt-5" id="HOME">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" ></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active"> <img src="img/VAS_0118.jpg" class="w-100" alt="..." style="object-fit: cover; height: 800px; background-position: center;" /> </div>
+          <div class="carousel-item"> <img src="img/VAS_0664.png" class="d-block w-100 img-fluid" alt="..." style="object-fit: cover; height: 800px; background-position: center;" /> </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="py-4">
+          <p class="text-center fs-6 m-0 mt-4" style="color: #fbb041;"> WELCOME TO </p>
+          <h1 class="text-center " >LAKSHMI MAHAL</h1>
+          <p class="text-center fs-6 m-0"> Elegant, Aesthetically Designed Marriage and Party Hall </p>
+          <div class="text-center my-3"> <img src="img/slide-border-dark.png" class="img-fluid" alt="" /> </div>
+          <p class="my-3 text-muted text-lg-center"> Lakshmi Mahal, situated in Devakottai, is a sophisticated and recently constructed venue
+            equipped with modern amenities and central air conditioning. Well-placed lighting fixtures
+            highlight the facade, ensuring that the beauty of the marriage hall is equally mesmerizing
+            during both the day and night. The carefully selected lighting elements create a warm and
+            welcoming atmosphere, setting the tone for a memorable event. Spanning across an extensive
+            1.20-acre campus, the Mahal boasts impressive architecture, making it a perfect choice for
+            various occasions such as weddings, family gatherings, corporate events, and commercial
+            functions.
+          </p>
+          <p class="my-3 text-muted text-lg-center"> The proprietor, Senthilnathan, not only owns the Mahal but also manages and oversees its
+            operations. Clients have the freedom to choose their preferred caterer and other service
+            providers for their functions and events. However, if needed, the Mahal can suggest suitable
+            service providers to meet the specific requirements of the customers. Nonetheless, clients retain
+            the flexibility to directly engage with these service providers for their events and functions.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="bg--yellow" id="FUNCTIONS/EVENTS">
+      <div class="container">
+        <div class="pt-3">
+          <h1 class="text-center mt-4">FUNCTIONS/EVENTS</h1>
+          <p class="text-center fs-6 m-0">  Elegant Hall for Celebrations </p>
+          <div class="text-center my-3"> <img src="img/section-line.png" class="img-fluid" alt="" /> </div>
+        </div>
+        <div class="row pt-3">
+          <div class="col-12 col-lg-3">
+            <div class="card bg--yellow ">
+              <img src="img/tamil-wedding-1.jpg" class="img-fluid" alt="" />
+              <div class="card-body">
+                <h5 class="card-title text-center fw-bold">Weddings</h5>
+                <p class="text-center my-1">Pre-Wedding Events</p>
+                <p class="text-center my-1">Wedding Ceremony</p>
+                <p class="text-center my-1">Post-Wedding Events</p>
+                <p class="text-center my-1">Wedding Parties</p>
+                <p class="text-center my-1">Baby Shower Ceremony</p>
+                <p class="text-center my-1">Ear Piercing Ceremony</p>
+              
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card bg--yellow">
+              <img src="img/Non-Stop-Bhangra-1-crop.jpg" class="img-fluid" alt="" />
+              <div class="card-body">
+                <h5 class="card-title text-center fw-bold">Family Function</h5>
+                <p class="text-center my-1">Birthdays</p>
+                <p class="text-center my-1">Anniversaries</p>
+                <p class="text-center my-1">Family Events & Functions</p>
+                <p class="text-center my-1">Private Parties</p>
+                <p class="text-center my-1">Galas & Get Togethers</p>
+                <p class="text-center my-1">Family & Friends Gathering</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card bg--yellow">
+              <img src="img/conference-overview-crop.jpg" class="img-fluid" alt="" />
+              <div class="card-body">
+                <h5 class="card-title text-center fw-bold"> Corporate Meetings </h5>
+                <p class="text-center my-1">Product Launches</p>
+                <p class="text-center my-1">Company Meetings</p>
+                <p class="text-center my-1">Get Togethers and Parties</p>
+                <p class="text-center my-1">Induction Programs</p>
+                <p class="text-center my-1">Corporate Events</p>
+                <p class="text-center my-1">Training Classes and Workshops</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 pb-4">
+            <div class="card bg--yellow">
+              <img src="img/siemens-sibc-2019-1-crop.jpg" class="img-fluid" alt="" />
+              <div class="card-body">
+                <h5 class="card-title text-center fw-bold"> Commercial Events </h5>
+                <p class="text-center my-1">Concerts</p>
+                <p class="text-center my-1">Plays</p>
+                <p class="text-center my-1">Audio Launches</p>
+                <p class="text-center my-1">Fashion Shows</p>
+                <p class="text-center my-1">Expos and Trade Fairs</p>
+                <p class="text-center my-1">Shootings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg--grey" id="FACILITIES">
+      <div class="container">
+        <div class="pt-3">
+          <h1 class="text-center mt-4">FACILITIES</h1>
+          <p class="text-center fs-6 m-0"> Beautifully Designed and Decorated World Class Facilities </p>
+          <div class="text-center my-3"> <img src="img/section-line.png" class="img-fluid" alt="" /> </div>
+        </div>
+        <div class="row pt-3">
+          <div class="col-12 col-lg-3 mb-3">
+            <div class="card h-100">
+              <img src="img/VAS_0665.jpg" class="img-fluid" alt="" />
+              <div class="card-body">
+                <h5 class="card-title text-center fw-bold">MAHAL VIEW</h5>
+                <p class="text-muted  m-0"> Approaching the marriage hall, you're greeted by an elegant facade exuding sophistication, adorned with intricate detailing and tasteful embellishments.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 mb-3">
+            <div class="card h-100">
+              <img src="img/VAS_0121.jpg" class="img-fluid" alt="" />
+              <div class="card-body" style="padding-bottom: 4rem">
+                <h5 class="card-title text-center fw-bold">MAIN ENTRANCE</h5>
+                <p class="text-muted  m-0"> The main entrance is adorned with beautifully crafted doors, showcasing a blend of 
+                  traditional and modern design elements.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 mb-3">
+            <div class="card h-100">
+              <img src="img/VAS_0148.jpg" class="img-fluid" alt="" />
+              <div class="card-body" style="padding-bottom: 5.4rem">
+                <h5 class="card-title text-center fw-bold">TEMPLE AT SITE</h5>
+                <p class="text-muted  m-0"> The site includes a temple with the deity facing east, adhering entirely to Vastu principles. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 mb-3 ">
+            <div class="card h-100">
+              <img src="img/VAS_0153.jpg" class="img-fluid" alt="" />
+              <div class="card-body" style="padding-bottom: 5.4rem">
+                <h5 class="card-title text-center fw-bold">RECEPTION HALL</h5>
+                <p class="text-muted  m-0"> The reception hall is magnificent, featuring granite flooring and an entrance facing north. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-3 mb-3">
+            <div class="card h-100">
+              <img src="img/VAS_0105-min.JPG" class="img-fluid" alt="" />
+              <div class="card-body" style="padding-bottom: 5.4rem">
+                <h5 class="card-title text-center fw-bold"> MAIN FUNCTION HALL </h5>
+                <p class="text-muted  m-0"> Main Function Hall with high ceiling, modern lighting, and a seating capacity of 750 guests </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 mb-3">
+            <div class="card h-100">
+              <img src="img/VAS_0126.jpg" class="img-fluid" alt="" />
+              <div class="card-body" style="padding-bottom: 5.4rem">
+                <h5 class="card-title text-center fw-bold">GRAND STAGE</h5>
+                <p class="text-muted m-0"> The elevated stage stands out prominently, tastefully adorned with a harmonious blend of traditional and modern decorations, capturing everyone's attention during the event.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 mb-3">
+            <div class="card h-100">
+              <img src="img/VAS_0130.jpg" class="img-fluid" alt="" />
+              <div class="card-body" style="padding-bottom: 4rem">
+                <h5 class="card-title text-center fw-bold">DINING HALL</h5>
+                <p class="text-muted  m-0"> Centrally Dining Hall with seating capacity of 350+ Guests to serve at a time. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 mb-3 ">
+            <div class="card h-100">
+              <img src="img/VAS_0511.jpg" class="img-fluid" alt="" />
+              <div class="card-body" style="padding-bottom: 4rem">
+                <h5 class="card-title text-center fw-bold">MINI HALL</h5>
+                <p class="text-muted  m-0"> Mini Function Hall for small family functions with a seating capacity of 250+ Guests. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-3 ms-lg-auto mb-3">
+            <div class="card h-100">
+              <img src="img/south-indian-hotel.jpg" class="img-fluid" alt="" />
+              <div class="card-body" style="padding-bottom: 4rem">
+                <h5 class="card-title text-center fw-bold">GUEST ROOMS</h5>
+                <p class="text-muted  m-0"> Well furnished Two A/C guest rooms. Spacious A/C Rooms for Bride and Groom. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 me-lg-auto mb-3">
+            <div class="card h-100">
+              <img src="img/618f35d0002ef9c8ae91604308c26e0c.jpg" class="img-fluid" style="max-height: 205px !important" alt="" />
+              <div class="card-body">
+                <h5 class="card-title text-center fw-bold">MODERN KITCHEN</h5>
+                <p class="text-muted  m-0"> Fully Equipped Modern Kitchen with all modern kitchen equipment to prepare and serve Traditional South Indian, North Indian and Continental cuisines.With 24hrs water supply </p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-12 col-lg-3">
+            <div class="card">
+              <img src="img/VAS_0126.jpg" class="img-fluid" alt="" />
+              <div class="card-body" style="padding-bottom: 4rem">
+                <h5 class="card-title text-center fw-bold">DINING HALL</h5>
+                <p> Centrally Air Conditioned Dining Hall with seating capacity of 200+ Guests to serve at a time. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3 pb-4">
+            <div class="card">
+              <img src="img/VAS_0511.jpg" class="img-fluid" alt="" />
+              <div class="card-body" style="padding-bottom: 4rem">
+                <h5 class="card-title text-center fw-bold">MINI HALL</h5>
+                <p> Mini Function Hall for small family functions with a seating capacity of 250+ Guests. </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <section class="" id="SERVICES">
+      <div class="container">
+        <div class="pt-3">
+          <h1 class="text-center mt-4">SERVICES</h1>
+          <p class="text-center fs-6 m-0">Basic & Additional Services</p>
+          <div class="text-center my-3"> <img src="img/section-line.png" class="img-fluid" alt="" /> </div>
+        </div>
+        <div class="row pt-3">
+          <div class="col-12 col-lg-4">
+            <div>
+              <p class="fs-4">Mahal Hiring Options</p>
+              <p class="fw-bold"> Guests can hire the Mahal for 6 Hours and Multiples with the following options: </p>
+              <ul class="">
+                <li class="my-3">Entire Mahal with all Facilities</li>
+                <li class="my-3">750+ Seating Capacity in the Function Hall</li>
+                <li class="my-3">350+ Seating Capacity in the Dining</li>
+                <li class="my-3">1,200 Guests (Floating).</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div>
+              <p class="fs-4">Basic services included in the mahal</p>
+              <p class="fw-bold"> Following facilities are included in the Basic Mahal Tariff: </p>
+              <ul class="">
+                <li class="my-3">Centralised Hall with a Grand Event Stage </li>
+                <li class="my-3">Chairs for the Event</li>
+                <li class="my-3">Chairs and Tables for Dining</li>
+                <li class="my-3">Two A/C fully furnished Rooms for Bride and Groom</li>
+                <li class="my-3">Two fully furnished Rooms for Guests</li>
+                <li class="my-3">Modern Kitchen with State of Art Facilities </li>
+                <li class="my-3">Cooking and Serving Vessels</li>
+                <li class="my-3">Open Car Park inside the Premises to park around 120 Cars </li>
+                <li class="my-3">Spacious Lawn in Front of the Mahal</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div>
+              <p class="fs-4">Additional services provided at actual cost</p>
+              <p class="fw-bold"> Following Additional Services are Provided by Mahal with Actual Charges to Customers: </p>
+              <ul class="">
+                <li class="my-3"> Special House Keeping, Cleaning and Security Services for the Event </li>
+                <li class="my-3">Cooking Gas Cylinders as needed</li>
+                <li class="my-3"> Stage and Mahal Decoration Service customized to Client Requirement </li>
+                <li class="my-3"> Serial Lighting and LED TVs During the Function and as needed by Client </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="hide" class="d-grid gap-2 col-lg-3 col-10 mx-auto my-4">
+          <button class="btn btn-warning text-white rounded-pill" type="button"> VIEW MORE </button>
+        </div>
+        <div id="hidee" style="display: none">
+          <div class="row pt-3">
+            <div class="col-12 col-lg-6">
+              <div>
+                <p class="fs-4"> Additional services providers through partner is required </p>
+                <p class="fw-bold"> Lakshmi Mahal may be provided the following additional services through its partners, if required : </p>
+                <ul class="">
+                  <li class="my-3"> Video and Live Streaming including arrangements for Drones for special photo effects </li>
+                  <li class="my-3">Event Management</li>
+                  <li class="my-3">Traditional Nadaswaram and Band</li>
+                  <li class="my-3"> Live Music Concert during the event customised to customer requirement and budget </li>
+                  <li class="my-3">Prohit for Ceremony</li>
+                  <li class="my-3">Flower and Garland Arrangements</li>
+                  <li class="my-3">Valet Parking</li>
+                  <li class="my-3">Wheel Chair on Request</li>
+                  <li class="my-3">Decorative Seer and Vaidheega Items</li>
+                  <li class="my-3">Additional Guest Rooms</li>
+                  <li class="my-3"> Outdoor Function and Catering arrangements at the Open Lawn in front of the Mahal</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 my-auto">
+              <div class="text-center"> <img src="img/logo.png" class="img-fluid rounded-circle w-50" alt="" /> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg--grey" id="GALLERY">
+      <div class="container">
+        <div class="pt-3">
+          <h1 class="text-center mt-4">GALLERY</h1>
+          <p class="text-center fs-6 m-0"> Recent Event Happened in Lakshmi Mahal </p>
+          <div class="text-center my-3"> <img src="img/section-line.png" class="img-fluid" alt="" /> </div>
+        </div>
+        <div class="gallery" id="gallery"></div>
+        <div class="row">
+          <div class="zoom col-lg-4 col-12 mb-3">
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal1"> <img class="img-fluid w-100 rounded-3 p-1 border border-dark" src="img/VAS_0157.jpg" alt="" style="object-fit: cover" /> </a>
+          </div>
+          <div class="zoom col-lg-4 col-12 mb-3">
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal2"> <img class="img-fluid w-100 rounded-3 p-1 border border-dark" src="img/VAS_0116.jpg" alt="" style="object-fit: cover" /> </a>
+          </div>
+          <div class="zoom col-lg-4 col-12 mb-3">
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal3"> <img class="img-fluid w-100 rounded-3 p-1 border border-dark" src="img/VAS_0571.jpg" alt="" style="object-fit: cover" /> </a>
+          </div>
+          <div class="zoom col-lg-4 col-12 mb-3">
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal4"> <img class="img-fluid w-100 rounded-3 p-1 border border-dark" src="img/VAS_1033.jpg" alt="" style="object-fit: cover" /> </a>
+          </div>
+          <div class="zoom col-lg-4 col-12 mb-3">
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal5"> <img class="img-fluid w-100 rounded-3 p-1 border border-dark" src="img/Untitled-design.png" alt="" style="object-fit: cover" /> </a>
+          </div>
+          <div class="zoom col-lg-4 col-12 mb-3">
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal6"> <img class="img-fluid w-100 rounded-3 p-1 border border-dark" src="img/VAS_0124.jpg" alt="" style="object-fit: cover" /> </a>
+          </div>
+          <div class="zoom col-lg-4 col-12 mb-3">
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal7"> <img class="img-fluid w-100 rounded-3 p-1 border border-dark" src="img/VAS_0102-min.JPG" alt="" style="object-fit: cover" /> </a>
+          </div>
+          <div class="zoom col-lg-4 col-12 mb-3">
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal8"> <img class="img-fluid w-100 rounded-3 p-1 border border-dark" src="img/VAS_0152.jpg" alt="" style="object-fit: cover" /> </a>
+          </div>
+          <div class="zoom col-lg-4 col-12 mb-3">
+            <a data-bs-toggle="modal" data-bs-target="#exampleModal9"> <img class="img-fluid w-100 rounded-3 p-1 border border-dark" src="img/VAS_0153.jpg" alt="" style="object-fit: cover" /> </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg--yellow pb-5" id="CONTACT">
+      <div class="container">
+        <div class="pt-3">
+          <h1 class="text-center mt-4">GET IN TOUCH</h1>
+          <p class="text-center fs-6 m-0"> Contact Us </p>
+          <div class="text-center my-3"> <img src="img/section-line.png" class="img-fluid" alt="" /> </div>
+        </div>
+        <div class="row pt-3">
+          <div class="col-12 col-lg-6 my-auto">
+            <div>
+              <div class="d-flex align-items-center my-3">
+                <div class="flex-shrink-0">
+                  <i class="icon-color fa-solid fa-compass fs-1"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <p class="fs-4 m-0">OUR LOCATION</p>
+                  <p class="fs-6 m-0"> Panipulanvayal E Rd, Eb road End, Devakottai, Tamil Nadu 630302, India </p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center my-3">
+                <div class="flex-shrink-0"> <i class="icon-color fa-solid fa-square-phone fs-1"></i> </div>
+                <div class="flex-grow-1 ms-3">
+                  <p class="fs-4 m-0">CALL US ON</p>
+                  <p class="fs-6 m-0">Mr. Senthilnathan - (+91) 93614 62956</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center my-3">
+                <div class="flex-shrink-0">
+                  <i class="icon-color fa-solid fa-envelope fs-1"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <p class="fs-4 m-0">SEND YOUR MESSAGE</p>
+                  <p class="fs-6 m-0">On Google maps</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center my-3">
+                <div class="flex-shrink-0">
+                  <i class="icon-color fa-solid fa-clock fs-1"></i>
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <p class="fs-4 m-0">OUR WORKING HOURS</p>
+                  <p class="fs-6 m-0"> All Days, Including Week ends. (9 AM TO 8 PM). </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="p-2">
+              <a href="https://goo.gl/maps/9B5jaEJHQyFW2jhH7" target="_blank"> <img src="img/Screenshot-2022.png" class="img-fluid rounded-3" alt="" /> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <!-- Footer -->
+      <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a target="_blank" class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/lakshmimahal.DVK/" role="button" ><i class="fab fa-facebook-f"></i ></a>
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button" ><i class="fab fa-twitter"></i ></a>
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button" ><i class="fab fa-google"></i ></a>
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button" ><i class="fab fa-instagram"></i ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)" >
+          <p class="text-white"> © 2020 Copyright: Lakshmi Mahal All Rights Reserved. </p>
+          <p class="text-white"> Panipulanvayal E Rd, Eb road End, Devakottai, Tamil Nadu 630302, India | (+91) 93614 62956</p>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </section>
+    <div class="modal fade" id="exampleModal1" tabindex="-1"  aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <!-- <div class="modal-header"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button> </div> -->
+          <div class="modal-body "> <img class=" img-fluid w-100" src="img/VAS_0157.jpg" alt="" /> </div>
+          <div class="modal-footer d-flex justify-content-center"> <button type="button" class="btn btn-primary rounded-pill " data-bs-dismiss="modal" > Close </button> </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1"  aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <!-- <div class="modal-header"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button> </div> -->
+          <div class="modal-body"> <img class="img-fluid w-100" src="img/VAS_0116.jpg" alt="" /> </div>
+          <div class="modal-footer d-flex justify-content-center"> <button type="button" class="btn btn-primary rounded-pill " data-bs-dismiss="modal" > Close </button> </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal3" tabindex="-1"  aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <!-- <div class="modal-header"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button> </div> -->
+          <div class="modal-body"> <img class="img-fluid w-100" src="img/VAS_0571.jpg" alt="" /> </div>
+          <div class="modal-footer d-flex justify-content-center"> <button type="button" class="btn btn-primary rounded-pill " data-bs-dismiss="modal" > Close </button> </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal4" tabindex="-1"  aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <!-- <div class="modal-header"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button> </div> -->
+          <div class="modal-body"> <img class="img-fluid w-100" src="img/VAS_1033.jpg" alt="" /> </div>
+          <div class="modal-footer d-flex justify-content-center"> <button type="button" class="btn btn-primary rounded-pill " data-bs-dismiss="modal" > Close </button> </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal5" tabindex="-1"  aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <!-- <div class="modal-header"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button> </div> -->
+          <div class="modal-body"> <img class="img-fluid w-100" src="img/VAS_0268.jpg" alt="" /> </div>
+          <div class="modal-footer d-flex justify-content-center"> <button type="button" class="btn btn-primary rounded-pill " data-bs-dismiss="modal" > Close </button> </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal6" tabindex="-1"  aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <!-- <div class="modal-header"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button> </div> -->
+          <div class="modal-body"> <img class="img-fluid w-100" src="img/VAS_0124.jpg" alt="" /> </div>
+          <div class="modal-footer d-flex justify-content-center"> <button type="button" class="btn btn-primary rounded-pill " data-bs-dismiss="modal" > Close </button> </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal7" tabindex="-1"  aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <!-- <div class="modal-header"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button> </div> -->
+          <div class="modal-body"> <img class="img-fluid w-100" src="img/VAS_0102-min.JPG" alt="" /> </div>
+          <div class="modal-footer d-flex justify-content-center"> <button type="button" class="btn btn-primary rounded-pill" data-bs-dismiss="modal" > Close </button> </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal8" tabindex="-1"  aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <!-- <div class="modal-header"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button> </div> -->
+          <div class="modal-body"> <img class="img-fluid w-100" src="img/VAS_0152.jpg" alt="" /> </div>
+          <div class="modal-footer d-flex justify-content-center"> <button type="button" class="btn btn-primary rounded-pill" data-bs-dismiss="modal" > Close </button> </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal9" tabindex="-1"  aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <!-- <div class="modal-header"> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button> </div> -->
+          <div class="modal-body"> <img class="img-fluid w-100" src="img/VAS_0153.jpg" alt="" /> </div>
+          <div class="modal-footer d-flex justify-content-center"> <button type="button" class="btn btn-primary rounded-pill" data-bs-dismiss="modal" > Close </button> </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous" ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" ></script>
+    <script>
+      $("#hide").click(function () {
+        $("#hidee").toggle();
+      });
+    </script>
+  </body>
+</html>
